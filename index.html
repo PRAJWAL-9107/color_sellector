@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color changer</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main{
+        width: 1100px;
+        margin-top: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+    }
+
+    .box {
+        height: 100px;
+        width: 100px;
+        font-size: clamp(20px, 22px, 25px);
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div style="background-color: red; color: indigo;" class="box" id="red"><h4>1</h4>.red</div>
+        <div style="background-color: blue; color: red;" class="box" id="blue"><h4>2</h4>.blue</div>
+        <div style="background-color: yellow; color: blue;" class="box" id="yellow"><h4>3</h4>.yellow</div>
+        <div style="background-color: orangered; color: yellow;" class="box" id="orangered"><h4>4</h4>.orange</div>
+        <div style="background-color: black; color: orangered;" class="box" id="black"><h4>5</h4>.black</div>
+        <div style="background-color: white; color: black;" class="box" id="white"><h4>6</h4>.white</div>
+        <div style="background-color: purple; color: white;" class="box" id="purple"><h4>7</h4>.purple</div>
+        <div style="background-color: chocolate; color: purple;" class="box" id="chocolate"><h4>8</h4>.chocolate</div>
+        <div style="background-color: greenyellow; color: chocolate;" class="box" id="greenyellow"><h4>9</h4>.green</div>
+        <div style="background-color: violet; color: greenyellow;" class="box" id="violet"><h4>10</h4>.violet</div>
+        <div style="background-color: gray; color: violet;" class="box" id="gray"><h4>11</h4>.gray</div>
+        <div style="background-color: indigo; color: gray;" class="box" id="indigo"><h4>12</h4>.indigo</div>
+    </div>
+</body>
+<script>
+
+    const box = document.querySelectorAll('.box');
+    const body = document.querySelector('body');
+    const one = document.querySelector('#red');
+    const two = document.querySelector('#blue');
+    const three = document.querySelector('#yellow');
+    const four = document.querySelector('#orangered');
+    const five = document.querySelector('#black');
+    const six = document.querySelector('#white');
+    const seven = document.querySelector('#purple');
+    const eight = document.querySelector('#chocolate');
+    const nine = document.querySelector('#greenyellow');
+    const ten = document.querySelector('#violet');
+    const eleven = document.querySelector('#gray');
+    const twelve = document.querySelector('#indigo');
+
+    const inputBox = document.createElement("input");
+    inputBox.type = "number";
+    inputBox.min = "1";
+    inputBox.max = "12";
+    inputBox.placeholder = "Enter your number here...";
+    inputBox.id = "inputBox"
+    document.body.appendChild(inputBox);
+
+
+    box.forEach(function (boxs) {
+        boxs.addEventListener("click", function (color) {
+            
+            if (color.target.id === 'red') {
+                body.style.background = 'red'
+            };
+
+            if (color.target.id === 'blue') {
+                body.style.background = 'blue'
+            };
+
+            if (color.target.id === 'yellow') {
+                body.style.background = 'yellow'
+            };
+            if (color.target.id === 'orangered') {
+                body.style.background = 'orangered'
+            };
+            if (color.target.id === 'black') {
+                body.style.background = 'black'
+            };
+            if (color.target.id === 'white') {
+                body.style.background = 'white'
+            };
+            if (color.target.id === 'purple') {
+                body.style.background = 'purple'
+            };
+            if (color.target.id === 'chocolate') {
+                body.style.background = 'chocolate'
+            };
+            if (color.target.id === 'greenyellow') {
+                body.style.background = 'greenyellow'
+            };
+            if (color.target.id === 'violet') {
+                body.style.background = 'violet'
+            };
+            if (color.target.id === 'gray') {
+                body.style.background = 'gray'
+            };
+            if (color.target.id === 'indigo') {
+                body.style.background = 'indigo'
+            };
+        })
+    });
+</script>
+
+</html>
