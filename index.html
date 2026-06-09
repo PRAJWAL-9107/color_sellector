@@ -6,40 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>color changer</title>
 </head>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        background-color: grey;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .main {
-        width: 1100px;
-        margin-top: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-sizing: border-box;
-        flex-wrap: wrap;
-    }
-
-    .box {
-        height: 100px;
-        width: 100px;
-        font-size: clamp(20px, 22px, 25px);
-        margin: 10px;
-        padding: 10px;
-        border-radius: 5px;
-        border: 2px solid black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-</style>
 
 <body>
     <div class="main">
@@ -81,75 +47,5 @@
         </div>
     </div>
 </body>
-<script>
-
-    const box = document.querySelectorAll('.box');
-    const body = document.querySelector('body');
-    const one = document.querySelector('#red');
-    const two = document.querySelector('#blue');
-    const three = document.querySelector('#yellow');
-    const four = document.querySelector('#orangered');
-    const five = document.querySelector('#black');
-    const six = document.querySelector('#white');
-    const seven = document.querySelector('#purple');
-    const eight = document.querySelector('#chocolate');
-    const nine = document.querySelector('#greenyellow');
-    const ten = document.querySelector('#violet');
-    const eleven = document.querySelector('#gray');
-    const twelve = document.querySelector('#indigo');
-
-    const inputBox = document.createElement("input");
-    inputBox.type = "number";
-    inputBox.min = "1";
-    inputBox.max = "12";
-    inputBox.placeholder = "Enter your number here...";
-    inputBox.id = "inputBox"
-    document.body.appendChild(inputBox);
-
-
-    box.forEach(function (boxs) {
-        boxs.addEventListener("click", function (color) {
-
-            if (color.target.id === 'red') {
-                body.style.background = 'red'
-            };
-
-            if (color.target.id === 'blue') {
-                body.style.background = 'blue'
-            };
-
-            if (color.target.id === 'yellow') {
-                body.style.background = 'yellow'
-            };
-            if (color.target.id === 'orangered') {
-                body.style.background = 'orangered'
-            };
-            if (color.target.id === 'black') {
-                body.style.background = 'black'
-            };
-            if (color.target.id === 'white') {
-                body.style.background = 'white'
-            };
-            if (color.target.id === 'purple') {
-                body.style.background = 'purple'
-            };
-            if (color.target.id === 'chocolate') {
-                body.style.background = 'chocolate'
-            };
-            if (color.target.id === 'greenyellow') {
-                body.style.background = 'greenyellow'
-            };
-            if (color.target.id === 'violet') {
-                body.style.background = 'violet'
-            };
-            if (color.target.id === 'gray') {
-                body.style.background = 'gray'
-            };
-            if (color.target.id === 'indigo') {
-                body.style.background = 'indigo'
-            };
-        })
-    });
-</script>
 
 </html>
