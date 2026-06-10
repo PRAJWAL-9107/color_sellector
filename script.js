@@ -1,34 +1,39 @@
-
-
 const box = document.querySelectorAll('.box');
 const body = document.querySelector('body');
-const one = document.querySelector('#red');
-const two = document.querySelector('#blue');
-const three = document.querySelector('#yellow');
-const four = document.querySelector('#orangered');
-const five = document.querySelector('#black');
-const six = document.querySelector('#white');
-const seven = document.querySelector('#purple');
-const eight = document.querySelector('#chocolate');
-const nine = document.querySelector('#greenyellow');
-const ten = document.querySelector('#violet');
-const eleven = document.querySelector('#gray');
-const twelve = document.querySelector('#indigo');
+// colors numbers
+const colors = {
+    1: "red",
+    2: "blue",
+    3: "yellow",
+    4: "orangered",
+    5: "black",
+    6: "white",
+    7: "purple",
+    8: "chocolate",
+    9: "greenyellow",
+    10: "violet",
+    11: "gray",
+    12: "indigo"
+};
 
 const inputBox = document.createElement("input");
 inputBox.type = "number";
 inputBox.min = "1";
 inputBox.max = "12";
 inputBox.placeholder = "Enter your number here...";
-inputBox.id = "inputBox"
+inputBox.id = "inputBox";
 document.body.appendChild(inputBox);
 
+document.inputBox.addEventListener("input",(e) => {
+    document.body.style.backgroundColor = colors[e.target.value] || "white";
+})
 
 box.forEach(function (boxs) {
     boxs.addEventListener("click", function (color) {
-
+        
         if (color.target.id === 'red') {
             body.style.background = 'red'
+            console.dir(color.target)
         };
 
         if (color.target.id === 'blue') {
