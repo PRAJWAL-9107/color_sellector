@@ -23,8 +23,15 @@ inputBox.max = "12";
 inputBox.placeholder = "Enter your number here...";
 inputBox.id = "inputBox";
 document.body.appendChild(inputBox);
+console.dir(inputBox.value)
 
 document.getElementById("inputBox").addEventListener("input",(e) => {
+
+    const random = (Math.floor(Math.random)*12) + 1;
+
+    if(inputBox.target.value === random){
+
+    document.body.style.backgroundColor = colors[e.target.value] || "grey";
     
-    document.body.style.backgroundColor = colors[e.target.value] || "white";
+    }
 })
