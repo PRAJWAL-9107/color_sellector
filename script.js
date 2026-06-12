@@ -16,6 +16,9 @@ const colors = {
     12: "indigo"
 };
 
+const h1 = document.createElement("h1");
+h1.textContent = `Choose a color number, If number match that color will be visible for 1 sec`
+
 const inputBox = document.createElement("input");
 inputBox.type = "number";
 inputBox.min = "1";
@@ -24,7 +27,9 @@ inputBox.placeholder = "Enter your number here...";
 inputBox.id = "inputBox";
 inputBox.value = "";
 
+document.body.appendChild(h1);
 document.body.appendChild(inputBox);
+
 inputBox.focus();
 
 const randomNum = (Math.floor(Math.random() * 12) + 1);
