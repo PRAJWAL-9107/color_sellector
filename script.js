@@ -12,7 +12,7 @@ const colors = {
     8: "chocolate",
     9: "greenyellow",
     10: "violet",
-    11: "gray",
+    11: "brown",
     12: "indigo"
 };
 
@@ -22,17 +22,24 @@ inputBox.min = "1";
 inputBox.max = "12";
 inputBox.placeholder = "Enter your number here...";
 inputBox.id = "inputBox";
+inputBox.value = "";
+
 document.body.appendChild(inputBox);
-console.dir(inputBox)
+inputBox.focus();
 
-document.getElementById("inputBox").addEventListener("input",(e) => {
+const randomNum = (Math.floor(Math.random() * 12) + 1);
 
-    const randomNum = (Math.floor(Math.random()*12) + 1);
-    
+document.getElementById("inputBox").addEventListener("input", (e) => {
 
-    if(inputBox.value === random){
+    if (Number(inputBox.value) === randomNum) {
 
-    document.body.style.backgroundColor = colors[e.target.value] || "grey";
-    
+        document.body.style.backgroundColor = colors[e.target.value] || "grey";
+
+
+        setTimeout(() => {
+            location.reload();
+        }, 1000);
+
     }
+
 })
