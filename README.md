@@ -28,3 +28,5 @@ If the entered number matches the generated number, the background color changes
 * HTML5
 * CSS3
 * JavaScript (ES6)
+
+* [PLAY](https://prajwal-9107.github.io/color_sellector/)
