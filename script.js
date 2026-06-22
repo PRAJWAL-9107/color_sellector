@@ -17,7 +17,7 @@ const colors = {
 };
 
 const h1 = document.createElement("h1");
-h1.textContent = `Choose a color number, If number match that color will be visible for 1 sec`
+h1.textContent = `Choose a color number, If number match, that color will be visible for 1 sec`
 
 const inputBox = document.createElement("input");
 inputBox.type = "number";
