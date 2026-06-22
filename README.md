@@ -29,4 +29,4 @@ If the entered number matches the generated number, the background color changes
 * CSS3
 * JavaScript (ES6)
 
-##* [PLAY](https://prajwal-9107.github.io/color_sellector/)
+## [PLAY](https://prajwal-9107.github.io/color_sellector/)
